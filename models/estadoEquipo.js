@@ -9,6 +9,11 @@ const EstadoEquipoSchema = mongoose.Schema({
         type: String,
         require: true,
         enum: ['Activo', 'Inactivo']
+    },
+    usuario:{
+        typre: mongoose.Schema.Types.ObjectId,
+        ref: 'Usuario',
+        require: [true, 'Usuario requerido']
     }
 },
 {

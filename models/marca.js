@@ -9,6 +9,11 @@ const MarcaSchema = mongoose.Schema({
         type: String,
         require: true,
         enum: ['Activo', 'Inactivo']
+    },
+    usuario: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Usuario',
+        require: [true, 'usuario requerido']
     }
 },
 {

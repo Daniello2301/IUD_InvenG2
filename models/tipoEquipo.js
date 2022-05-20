@@ -14,7 +14,7 @@ const TipoEquipoSchema = mongoose.Schema({
     usuario:{
         typre: mongoose.Schema.Types.ObjectId,
         ref: 'Usuario',
-        require: true
+        require: [true, 'Usuario requerido']
     }
 },
 {
